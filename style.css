@@ -267,6 +267,31 @@ b,strong{font-weight:700}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
 .reveal.vis{opacity:1;transform:none}
 
+/* ---------- SEO 落地頁 ---------- */
+.lp-hero{position:relative;display:flex;align-items:center;min-height:56vh;max-height:660px;overflow:hidden;background:var(--navy)}
+.lp-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,51,73,.62) 0%,rgba(13,51,73,.34) 45%,rgba(13,51,73,.94) 100%)}
+.lp-hero .wrap{position:relative;z-index:2;padding:150px 22px 70px;width:100%}
+.lp-kicker{font-size:13px;letter-spacing:4px;color:var(--gold-light);margin-bottom:14px}
+.lp-title{font-size:clamp(28px,4.4vw,50px);color:#fff;letter-spacing:2px;font-weight:800;line-height:1.3;margin-bottom:14px}
+.lp-title .lt-en{font-family:var(--font-display);letter-spacing:6px;font-weight:600}
+.lp-sub{max-width:760px;font-size:16.5px;color:#d5e6ee;margin-bottom:26px}
+.lp-hero .hero-chips{justify-content:flex-start;margin-bottom:30px}
+.lp-hero .hero-cta{justify-content:flex-start}
+.crumbs{background:#0a2939;padding:12px 0;font-size:13px;color:#8fb0bf}
+.crumbs a{color:var(--gold-light);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{color:#6f92a1;margin:0 8px}
+.rel{padding:64px 0;background:linear-gradient(180deg,#f4fafb,#fff)}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.rel-card{display:block;background:#fff;border-radius:14px;padding:22px 24px;box-shadow:0 4px 16px rgba(13,51,73,.08);
+  border-left:4px solid var(--gold-bright);text-decoration:none;transition:.25s}
+.rel-card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(13,51,73,.15)}
+.rel-card b{display:block;color:var(--navy);font-size:16px;margin-bottom:6px}
+.rel-card span{font-size:13.5px;color:var(--ink-soft)}
+.foot-links{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;margin-bottom:26px}
+.foot-links a{color:#c6dbe5;text-decoration:none;font-size:14px;letter-spacing:.5px}
+.foot-links a:hover{color:var(--gold-light)}
+
 /* ---------- Responsive ---------- */
 @media(max-width:1000px){
   .stats-grid{grid-template-columns:repeat(3,1fr)}
@@ -305,6 +330,9 @@ b,strong{font-weight:700}
   .club-grid .c-wide img{height:220px}
   .edu-grid,.dev-grid,.book-grid,.pay-grid{grid-template-columns:1fr}
   .spec-imgs{grid-template-columns:1fr}
+  .lp-hero{min-height:auto;padding:0}
+  .lp-hero .wrap{padding:120px 22px 60px}
+  .lp-hero .hero-cta .btn{width:100%;max-width:340px}
   .two-imgs img:first-child{height:220px}
   .wa-float{padding:13px 15px}
   .wa-tip{display:none}
